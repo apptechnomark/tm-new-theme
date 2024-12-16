@@ -30,7 +30,7 @@ const NextCaseStudy: React.FC<NextCaseStudyProps> = ({ content }) => {
   };
 
   return (
-    <div className="container"> 
+    <div className="container">
       <div className="w-3/4 mx-auto text-center">
         <div className="flex items-center mb-6 text-5xl md:text-7xl">
           <Image
