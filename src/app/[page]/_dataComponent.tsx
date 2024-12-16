@@ -1,9 +1,8 @@
 "use client";
-import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
-
-import dynamic from "next/dynamic";
 import { useTheme } from "components/ThemeContext/ThemeContext";
+import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
+import dynamic from "next/dynamic";
+import { useRef } from "react";
 
 const Blog = dynamic(() => import("components/Blogs/Blog"));
 const FeatureSection = dynamic(() => import("components/FeatureSection/FeatureSection"));
@@ -600,6 +599,45 @@ const DataComponent = ({ id }: { id: number }) => {
     ],
   };
 
+  const renderComponent = () => {
+    switch (id) {
+      case 1:
+        return <HeroSection />;
+      case 2:
+        return <FeatureSection content={featureContent} />;
+      case 3:
+        return <MethodologySection content={methodologySteps} />;
+      case 4:
+        return <OurServices content={serviceList} />;
+      case 5:
+        return <SuccessStories content={SuccessStoriesContent} />;
+      case 6:
+        return <CaseStudyCard content={caseStudyData} />;
+      case 7:
+        return <NextCaseStudy content={NextCaseStudyContent} />;
+      case 8:
+        return <Guarantee content={guarantee} />;
+      case 9:
+        return <ClientSpeak content={clientList} />;
+      case 10:
+        return <Achievements content={AchievementsContent} />;
+      case 11:
+        return <MeetDiverse data={meetDiverse} />;
+      case 12:
+        return <OurLocations content={locationsList} />;
+      case 13:
+        return <Blog content={blogData} />;
+      case 14:
+        return <Awards content={awardsData} />;
+      case 15:
+        return <FormSection formContent={formContent} />;
+      case 16:
+        return <Footer footerData={footerData} />
+      default:
+        return null;
+    };
+  }
+
   const useParallax = (value: MotionValue<number>, distance: number) => {
     return useTransform(value, [0, 1], [-distance, distance]);
   };
@@ -607,7 +645,6 @@ const DataComponent = ({ id }: { id: number }) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 0);
-  // const isTallSection = [9].includes(id);
   return (
     <motion.section
       ref={ref}
@@ -616,22 +653,7 @@ const DataComponent = ({ id }: { id: number }) => {
       style={{ y }}
       key={id}
     >
-      {id === 1 && <HeroSection />}
-      {id === 2 && <FeatureSection content={featureContent} />}
-      {id === 3 && <MethodologySection content={methodologySteps} />}
-      {id === 4 && <OurServices content={serviceList} />}
-      {id === 5 && <SuccessStories content={SuccessStoriesContent} />}
-      {id === 6 && <CaseStudyCard content={caseStudyData} />}
-      {id === 7 && <NextCaseStudy content={NextCaseStudyContent} />}
-      {id === 8 && <Guarantee content={guarantee} />}
-      {id === 9 && <ClientSpeak content={clientList} />}
-      {id === 10 && <Achievements content={AchievementsContent} />}
-      {id === 11 && <MeetDiverse data={meetDiverse} />}
-      {id === 12 && <OurLocations content={locationsList} />}
-      {id === 13 && <Blog content={blogData} />}
-      {id === 14 && <Awards content={awardsData} />}
-      {id === 15 && <FormSection formContent={formContent} />}
-      {id === 16 && <Footer footerData={footerData} />}
+      {renderComponent()}
     </motion.section>
   );
 };
