@@ -2,7 +2,6 @@
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-
 import dynamic from "next/dynamic";
 import { useTheme } from "components/ThemeContext/ThemeContext";
 
@@ -633,22 +632,6 @@ const DataComponent = ({ id }: { id: number }) => {
       {id === 14 && <Awards content={awardsData} />}
       {id === 15 && <FormSection formContent={formContent} />}
       {id === 16 && <Footer footerData={footerData} />}
-      {id != 1 &&
-        id != 2 &&
-        id != 3 &&
-        id != 4 &&
-        id != 5 &&
-        id != 6 &&
-        id != 7 &&
-        id != 8 &&
-        id != 9 &&
-        id != 10 &&
-        id != 11 &&
-        id != 12 &&
-        id != 13 &&
-        id != 14 &&
-        id != 15 &&
-        id != 16 && <section className="tm-section">#0{id}</section>}
     </motion.section>
   );
 };
