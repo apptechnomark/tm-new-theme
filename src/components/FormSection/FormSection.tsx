@@ -88,6 +88,7 @@ const FormSection = ({ formContent }: FormSectionProps) => {
             width={100}
             height={100}
             className={`h-[100px] w-[100px] ${styles.flipThumb}`}
+            loading="lazy"
           />
         </motion.div>
       </motion.div>
@@ -104,6 +105,7 @@ const FormSection = ({ formContent }: FormSectionProps) => {
           width={1366}
           height={631}
           className="rounded-3xl w-full absolute -z-10 h-full left-0 top-0 opacity-80"
+          loading="lazy"
         />
         <div className="w-7/12">
           <p className="font-bold text-xl">{formContent.formHeading}</p>
@@ -236,6 +238,7 @@ const FormSection = ({ formContent }: FormSectionProps) => {
             width={130}
             height={130}
             className="h-[130px] w-[130px]"
+            loading="lazy"
           />
         </motion.div>
       </motion.div>

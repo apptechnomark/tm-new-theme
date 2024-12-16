@@ -122,6 +122,7 @@ const MeetDiverse: React.FC<MeetDiverseProps> = ({ data }) => {
                     width={30}
                     height={30}
                     className="lg:w-[40px] md:w-[30px] w-[20px]"
+                    loading="lazy"
                   />
                   <p className="lg:text-base md:text-sm text-xs">
                     {image.title}

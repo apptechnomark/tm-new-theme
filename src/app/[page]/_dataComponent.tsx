@@ -1,24 +1,27 @@
 "use client";
-
-import Blog from "components/Blogs/Blog";
-import FeatureSection from "components/FeatureSection/FeatureSection";
-import Guarantee from "components/Guarantee/Guarantee";
-import Footer from "components/Footer/Footer";
-import HeroSection from "components/HeroSection/HeroSection";
-import MeetDiverse from "components/MeetDiverse/MeetDiverse";
-import MethodologySection from "components/MethodologySection/MethodologySection";
-import NextCaseStudy from "components/NextCaseStudy/NextCaseStudy";
-import OurLocations from "components/OurLocations/OurLocations";
-import OurServices from "components/OurServices/OurServices";
-import CaseStudyCard from "components/SuccessStories/CaseStudy/CaseStudyCard";
-import SuccessStories from "components/SuccessStories/SuccessStories";
-import { useTheme } from "components/ThemeContext/ThemeContext";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import ClientSpeak from "components/ClientSpeak/ClientSpeak";
-import Achievements from "components/Achievements/Achievements";
-import Awards from "components/Awards/Awards";
-import FormSection from "components/FormSection/FormSection";
+
+
+import dynamic from "next/dynamic";
+import { useTheme } from "components/ThemeContext/ThemeContext";
+
+const Blog = dynamic(() => import("components/Blogs/Blog"));
+const FeatureSection = dynamic(() => import("components/FeatureSection/FeatureSection"));
+const Guarantee = dynamic(() => import("components/Guarantee/Guarantee"));
+const Footer = dynamic(() => import("components/Footer/Footer"));
+const HeroSection = dynamic(() => import("components/HeroSection/HeroSection"));
+const MeetDiverse = dynamic(() => import("components/MeetDiverse/MeetDiverse"));
+const MethodologySection = dynamic(() => import("components/MethodologySection/MethodologySection"));
+const NextCaseStudy = dynamic(() => import("components/NextCaseStudy/NextCaseStudy"));
+const OurLocations = dynamic(() => import("components/OurLocations/OurLocations"));
+const OurServices = dynamic(() => import("components/OurServices/OurServices"));
+const CaseStudyCard = dynamic(() => import("components/SuccessStories/CaseStudy/CaseStudyCard"));
+const SuccessStories = dynamic(() => import("components/SuccessStories/SuccessStories"));
+const ClientSpeak = dynamic(() => import("components/ClientSpeak/ClientSpeak"));
+const Achievements = dynamic(() => import("components/Achievements/Achievements"));
+const Awards = dynamic(() => import("components/Awards/Awards"));
+const FormSection = dynamic(() => import("components/FormSection/FormSection"));
 
 const DataComponent = ({ id }: { id: number }) => {
   const { theme } = useTheme();
@@ -371,75 +374,66 @@ const DataComponent = ({ id }: { id: number }) => {
     buttonUrl: "#",
     caseStudyImgURL: [
       {
-        imgUrl: `${
-          theme === "dark"
-            ? "/images/darknextCaseStudy.png"
-            : "/images/lightnextCaseStudy.png"
-        }`,
+        imgUrl: `${theme === "dark"
+          ? "/images/darknextCaseStudy.png"
+          : "/images/lightnextCaseStudy.png"
+          }`,
         altText: "Case Study",
       },
       {
-        imgUrl: `${
-          theme === "dark"
-            ? "/images/darknextCaseStudy.png"
-            : "/images/lightnextCaseStudy.png"
-        }`,
+        imgUrl: `${theme === "dark"
+          ? "/images/darknextCaseStudy.png"
+          : "/images/lightnextCaseStudy.png"
+          }`,
         altText: "Case Study",
       },
       {
-        imgUrl: `${
-          theme === "dark"
-            ? "/images/darknextCaseStudy.png"
-            : "/images/lightnextCaseStudy.png"
-        }`,
+        imgUrl: `${theme === "dark"
+          ? "/images/darknextCaseStudy.png"
+          : "/images/lightnextCaseStudy.png"
+          }`,
         altText: "Case Study",
       },
       {
-        imgUrl: `${
-          theme === "dark"
-            ? "/images/darknextCaseStudy.png"
-            : "/images/lightnextCaseStudy.png"
-        }`,
+        imgUrl: `${theme === "dark"
+          ? "/images/darknextCaseStudy.png"
+          : "/images/lightnextCaseStudy.png"
+          }`,
         altText: "Case Study",
       },
       {
-        imgUrl: `${
-          theme === "dark"
-            ? "/images/darknextCaseStudy.png"
-            : "/images/lightnextCaseStudy.png"
-        }`,
+        imgUrl: `${theme === "dark"
+          ? "/images/darknextCaseStudy.png"
+          : "/images/lightnextCaseStudy.png"
+          }`,
         altText: "Case Study",
       },
       {
-        imgUrl: `${
-          theme === "dark"
-            ? "/images/darknextCaseStudy.png"
-            : "/images/lightnextCaseStudy.png"
-        }`,
+        imgUrl: `${theme === "dark"
+          ? "/images/darknextCaseStudy.png"
+          : "/images/lightnextCaseStudy.png"
+          }`,
         altText: "Case Study",
       },
       {
-        imgUrl: `${
-          theme === "dark"
-            ? "/images/darknextCaseStudy.png"
-            : "/images/lightnextCaseStudy.png"
-        }`,
+        imgUrl: `${theme === "dark"
+          ? "/images/darknextCaseStudy.png"
+          : "/images/lightnextCaseStudy.png"
+          }`,
         altText: "Case Study",
       },
       {
-        imgUrl: `${
-          theme === "dark"
-            ? "/images/darknextCaseStudy.png"
-            : "/images/lightnextCaseStudy.png"
-        }`,
+        imgUrl: `${theme === "dark"
+          ? "/images/darknextCaseStudy.png"
+          : "/images/lightnextCaseStudy.png"
+          }`,
         altText: "Case Study",
       },
       {
-        imgUrl: `${
-          theme === "dark"
-            ? "/images/darknextCaseStudy.png"
-            : "/images/lightnextCaseStudy.png"
-        }`,
+        imgUrl: `${theme === "dark"
+          ? "/images/darknextCaseStudy.png"
+          : "/images/lightnextCaseStudy.png"
+          }`,
         altText: "Case Study",
       },
     ],
@@ -618,9 +612,8 @@ const DataComponent = ({ id }: { id: number }) => {
   return (
     <motion.section
       ref={ref}
-      className={`tm-section ${theme === "dark" ? "bg-[var(--dark-bg)]" : ""} ${
-        id === 5 ? "!items-start" : ""
-      } ${id === 16 ? "!block" : ""}`}
+      className={`tm-section ${theme === "dark" ? "bg-[var(--dark-bg)]" : ""} ${id === 5 ? "!items-start" : ""
+        } ${id === 16 ? "!block" : ""}`}
       style={{ y }}
       key={id}
     >

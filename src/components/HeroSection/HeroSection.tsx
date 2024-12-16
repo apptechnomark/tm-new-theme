@@ -41,31 +41,31 @@ const HeroSection = () => {
                 <div className="lg:w-1/2 flex flex-wrap">
                     <div className="w-full flex justify-end">
                         <div className="relative pb-2">
-                            <Image src="/images/life-at-technomark-thumbnail.png" alt="Life @ TechnoMark" className="rounded-lg w-full max-h-[150px]" width="490" height="150" />
+                            <Image src="/images/life-at-technomark-thumbnail.png" alt="Life @ TechnoMark" className="rounded-lg w-full max-h-[150px]" width="490" height="150" loading="lazy" />
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <Image src="/images/play.png" alt="Play" className="w-10 h-10" width={50} height={50} />
+                                <Image src="/images/play.png" alt="Play" className="w-10 h-10" width={50} height={50} loading="lazy" />
                             </div>
                         </div>
                     </div>
                     <div className="w-full flex justify-end">
                         <div className="relative pb-2 pr-2">
-                            <Image src="/images/TM Introduction Video.png" alt="TM Introduction Video" className="rounded-lg w-full max-h-[220px]" width="527" height="220" />
+                            <Image src="/images/TM Introduction Video.png" alt="TM Introduction Video" className="rounded-lg w-full max-h-[220px]" width="527" height="220" loading="lazy" />
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <Image src="/images/play.png" alt="Play" className="w-10 h-10" width={50} height={50} />
+                                <Image src="/images/play.png" alt="Play" className="w-10 h-10" width={50} height={50} loading="lazy" />
                             </div>
                         </div>
                         <div className="relative pb-2">
-                            <Image src="/images/technology-video-thumbnail.png" alt="Technology Video" className="rounded-lg w-full max-h-[220px]" width="300" height="220" />
+                            <Image src="/images/technology-video-thumbnail.png" alt="Technology Video" className="rounded-lg w-full max-h-[220px]" width="300" height="220" loading="lazy" />
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <Image src="/images/play.png" alt="Play" className="w-10 h-10" width={50} height={50} />
+                                <Image src="/images/play.png" alt="Play" className="w-10 h-10" width={50} height={50} loading="lazy" />
                             </div>
                         </div>
                     </div>
                     <div className="w-full flex justify-end">
                         <div className="relative">
-                            <Image src="/images/testimonials-video-thumbnail.png" alt="Testimonials Video" className="rounded-lg w-full max-h-[150px]" width="575" height="150" />
+                            <Image src="/images/testimonials-video-thumbnail.png" alt="Testimonials Video" className="rounded-lg w-full max-h-[150px]" width="575" height="150" loading="lazy" />
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <Image src="/images/play.png" alt="Play" className="w-10 h-10" width={50} height={50} />
+                                <Image src="/images/play.png" alt="Play" className="w-10 h-10" width={50} height={50} loading="lazy" />
                             </div>
                         </div>
                     </div>
