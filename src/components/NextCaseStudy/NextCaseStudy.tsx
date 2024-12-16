@@ -24,6 +24,7 @@ interface NextCaseStudyProps {
 
 const NextCaseStudy: React.FC<NextCaseStudyProps> = ({ content }) => {
   const [direction, setDirection] = useState<"left" | "right">("left");
+
   const handleAnimationComplete = () => {
     setDirection((prev) => (prev === "left" ? "right" : "left"));
   };
@@ -31,7 +32,7 @@ const NextCaseStudy: React.FC<NextCaseStudyProps> = ({ content }) => {
   return (
     <div className="container">
       <div className="w-3/4 mx-auto text-center">
-        <div className="flex items-center jus mb-6 text-5xl md:text-7xl">
+        <div className="flex items-center mb-6 text-5xl md:text-7xl">
           <Image
             alt={content.titleImageAlt}
             src={content.titleImage}
@@ -51,7 +52,7 @@ const NextCaseStudy: React.FC<NextCaseStudyProps> = ({ content }) => {
           </p>
         )}
         {content.desc && (
-          <p className=" max-w-[450px] text-center mx-auto pt-3 text-lg md:text-lg">
+          <p className="max-w-[450px] text-center mx-auto pt-3 text-lg md:text-lg">
             {content.desc}
           </p>
         )}
@@ -71,7 +72,7 @@ const NextCaseStudy: React.FC<NextCaseStudyProps> = ({ content }) => {
           <motion.div
             className="flex"
             animate={{
-              x: ["0%", "-50%", "0%"],
+              x: direction === "left" ? ["0%", "-50%"] : ["-50%", "0%"],
             }}
             transition={{
               repeat: Infinity,
