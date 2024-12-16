@@ -18,11 +18,6 @@ async function fetchHomeData() {
 export default async function Page() {
   const data = await fetchHomeData();
 
-  // Add a check for data
-  if (!data) {
-    return <div>Loading or No Data...</div>;
-  }
-
   return (
     <>
       {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].map((id) => (
