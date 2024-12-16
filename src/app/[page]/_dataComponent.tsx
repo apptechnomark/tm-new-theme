@@ -205,6 +205,7 @@ interface HomeDataProps {
 
 const DataComponent = ({ id, data }: { id: number; data: HomeDataProps }) => {
   const { theme } = useTheme();
+  console.log(`Rendering component ${id} with data:`, data);
 
   const renderComponent = () => {
     switch (id) {
