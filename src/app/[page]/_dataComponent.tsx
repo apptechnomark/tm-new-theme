@@ -35,7 +35,175 @@ const Achievements = dynamic(
 const Awards = dynamic(() => import("components/Awards/Awards"));
 const FormSection = dynamic(() => import("components/FormSection/FormSection"));
 
-const DataComponent = ({ id, data }: { id: number; data: any }) => {
+interface HomeDataProps {
+  featureContent: {
+    secTitle: string;
+    boxSubTitle: string;
+    companyName: string;
+    featureTitle: string;
+    featuresList: string[];
+    buttonText: string;
+    buttonUrl: string;
+  };
+
+  methodologySteps: Array<{
+    stepNumber: string;
+    title: string;
+    description: string;
+    details: string[];
+  }>;
+
+  serviceList: Array<{
+    imgUrl: string;
+    sectionTitle: string;
+    sectionDesc: string;
+  }>;
+
+  caseStudyData: {
+    logo: string;
+    logoDark: string;
+    title: string;
+    description: string;
+    technologies: string[];
+    industry: string;
+    challenges: string[];
+    solutions: string[];
+    results: Array<{
+      metric: string;
+      value: string;
+    }>;
+    videoLink: string;
+  };
+
+  SuccessStoriesContent: {
+    sectionTitle: string;
+    titleHighlightWords: string[];
+    sectionDesc: string;
+    projectList: Array<{
+      logo: string;
+      logoDark: string;
+      title: string;
+      description: string;
+      technologies: string[];
+      industry: string;
+      challenges: string[];
+      solutions: string[];
+      results: Array<{
+        metric: string;
+        value: string;
+      }>;
+      videoLink: string;
+    }>;
+  };
+
+  clientList: {
+    title: string;
+    desc: string;
+    sections: Array<{
+      videoUrl: string;
+      clientNameTitle: string;
+      ClientNameDesc: string;
+    }>;
+  };
+
+  guarantee: {
+    title: string;
+    videoLink: string;
+    sections: Array<{
+      title: string;
+      description: string;
+      count: number;
+    }>;
+    buttonLabel: string;
+    buttonLink: string;
+  };
+
+  meetDiverse: {
+    title: string;
+    description: string;
+    images: Array<{
+      src: string;
+      alt: string;
+      title: string;
+    }>;
+  };
+
+  locationsList: Array<{
+    imgUrl: string;
+    sectionTitle: string;
+    sectionDesc: string;
+  }>;
+
+  NextCaseStudyContent: {
+    titleImage: string;
+    titleImageAlt: string;
+    title: string;
+    highlightWords: string[];
+    descTitle: string;
+    desc: string;
+    buttonText: string;
+    buttonUrl: string;
+    caseStudyImgURL: Array<{
+      imgUrl: string;
+      altText: string;
+    }>;
+  };
+
+  AchievementsContent: {
+    title: string;
+    descTitle: string;
+    desc: string;
+    highlightWords: string[];
+    achievements: Array<{
+      icon: string;
+      number: string;
+      width: number;
+      height: number;
+      label: string;
+      backgroundImage: string;
+    }>;
+  };
+
+  formContent: {
+    title: string;
+    nextSteps: string[];
+    formHeading: string;
+    submitButtonText: string;
+    nextStepsHeading: string;
+  };
+
+  footerData: Array<{
+    name: string;
+    children: Array<{
+      name: string;
+      link: string;
+    }>;
+  }>;
+
+  blogData: {
+    title: string;
+    buttonText: string;
+    buttonUrl: string;
+    blogItem: Array<{
+      imageUrl: string;
+      title: string;
+      category: string;
+      updateDate: string;
+      desc: string;
+    }>;
+  };
+
+  awardsData: {
+    title: string;
+    highlightedWord: string[];
+    awardList: Array<{
+      imgUrl: string;
+      altText: string;
+    }>;
+  };
+}
+
+const DataComponent = ({ id, data }: { id: number; data: HomeDataProps }) => {
   const { theme } = useTheme();
 
   const renderComponent = () => {
@@ -71,7 +239,7 @@ const DataComponent = ({ id, data }: { id: number; data: any }) => {
       case 15:
         return <FormSection formContent={data.formContent} />;
       case 16:
-        return <Footer footerData={data.footerData} />
+        return <Footer footerData={data.footerData} />;
       default:
         return null;
     }

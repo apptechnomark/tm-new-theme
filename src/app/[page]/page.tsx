@@ -1,5 +1,4 @@
 // app/page.tsx
-import axios from "axios";
 import DataComponent from "./_dataComponent";
 
 // Option 1: Async Server Component
