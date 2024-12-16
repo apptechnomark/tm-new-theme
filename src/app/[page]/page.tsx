@@ -1,12 +1,9 @@
-// app/page.tsx
 import DataComponent from "./_dataComponent";
-
-// Option 1: Async Server Component
 async function fetchHomeData() {
   try {
-    const res = await fetch("http://localhost:3000/home.json", {
-      cache: "no-store", 
-      next: { revalidate: 10 }, 
+    const res = await fetch("https://tm-new-theme.vercel.app/home.json", {
+      cache: "no-store",
+      next: { revalidate: 10 },
     });
     return res.json();
   } catch (error) {
