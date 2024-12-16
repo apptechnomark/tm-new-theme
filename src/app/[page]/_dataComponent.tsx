@@ -209,37 +209,37 @@ const DataComponent = ({ id, data }: { id: number; data: HomeDataProps }) => {
   const renderComponent = () => {
     switch (id) {
       case 1:
-        return <HeroSection />;
+        return data && <HeroSection />;
       case 2:
-        return <FeatureSection content={data.featureContent} />;
+        return data && <FeatureSection content={data.featureContent} />;
       case 3:
-        return <MethodologySection content={data.methodologySteps} />;
+        return data && <MethodologySection content={data.methodologySteps} />;
       case 4:
-        return <OurServices content={data.serviceList} />;
+        return data && <OurServices content={data.serviceList} />;
       case 5:
-        return <SuccessStories content={data.SuccessStoriesContent} />;
+        return data && <SuccessStories content={data.SuccessStoriesContent} />;
       case 6:
-        return <CaseStudyCard content={data.caseStudyData} />;
+        return data && <CaseStudyCard content={data.caseStudyData} />;
       case 7:
-        return <NextCaseStudy content={data.NextCaseStudyContent} />;
+        return data && <NextCaseStudy content={data.NextCaseStudyContent} />;
       case 8:
-        return <Guarantee content={data.guarantee} />;
+        return data && <Guarantee content={data.guarantee} />;
       case 9:
-        return <ClientSpeak content={data.clientList} />;
+        return data && <ClientSpeak content={data.clientList} />;
       case 10:
-        return <Achievements content={data.AchievementsContent} />;
+        return data && <Achievements content={data.AchievementsContent} />;
       case 11:
-        return <MeetDiverse data={data.meetDiverse} />;
+        return data && <MeetDiverse data={data.meetDiverse} />;
       case 12:
-        return <OurLocations content={data.locationsList} />;
+        return data && <OurLocations content={data.locationsList} />;
       case 13:
-        return <Blog content={data.blogData} />;
+        return data && <Blog content={data.blogData} />;
       case 14:
-        return <Awards content={data.awardsData} />;
+        return data && <Awards content={data.awardsData} />;
       case 15:
-        return <FormSection formContent={data.formContent} />;
+        return data && <FormSection formContent={data.formContent} />;
       case 16:
-        return <Footer footerData={data.footerData} />;
+        return data && <Footer footerData={data.footerData} />;
       default:
         return null;
     }
