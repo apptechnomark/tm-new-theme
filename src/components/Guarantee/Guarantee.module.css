@@ -1,0 +1,27 @@
+.caseStudy {
+  backdrop-filter: blur(23.170730590820312px);
+  box-shadow: 0px 0px 9.27px 0px rgba(0, 0, 0, 0.1) inset;
+  border-radius: 2.3rem;
+}
+
+.videoSection {
+  box-shadow: 0px 0px 30px 0px #0000001a;
+}
+
+.guaranteeOverlay:before {
+  content: "";
+  position: absolute;
+  left: 0%;
+  top: 0;
+  background: radial-gradient(24.45% 76.73% at 80.21% 44.93%, rgba(0, 0, 0, 0.7) 0%, #090b17 100%);
+  box-shadow: 0px 0px 10px 0px #0000001a inset;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 1.5rem;
+}
+
+.guaranteeOverlayLight:before {
+  background: radial-gradient(24.45% 76.73% at 80.21% 44.93%, rgba(241, 241, 241, 0.7) 0%, #f1f1f1 100%);
+  box-shadow: 0px 0px 9.27px 0px #0000001a inset;
+}

@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-bg: #ffffff;
+  --foreground: #090b17;
+  --black: #000000;
+  --ash-black: #222;
+  --offWhite: #fafafa;
+  --sky: #00ccff;
+  --green: #22dddd;
+  --blue-border: #4b8ba6;
+  --blue: #262dd3;
+  --dusk: #6600ff;
+  --purple: #9900ff;
+  --pink: #ff0066;
+  --text-red: #f13c31;
+  --orange: #fd7702;
+  --yellow: #ffbb00;
+  --button-bg: #f13c31;
+  --dark-bg: #090b17;
+  --light-bg: #eceaf7;
+  --dark-foreground: #fff;
+  --highlited-color: #1492c8;
+  --serviceBg-dark: rgba(38, 38, 38, 0.8);
+  --serviceBg-light: #ebebeb;
+  --light-gray: #e7e7e7;
+  --successBorder-dark: #4c4c4c;
+  --successBorder-light: #9e9e9e;
+  --caseStudy-bg: #262626;
+  --guarantee-count-dark: #626262;
+  --guarantee-count-light: #9f9f9f;
+  --client-name-bg: rgba(51, 51, 51, 0.72);
+}
+
+* {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  background: var(--primary-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--foreground);
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--primary-bg);
+}
+
+.tm-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  scroll-snap-align: center;
+  perspective: 500px;
+  padding-top: 65px;
+  overflow: hidden;
+}

@@ -1,0 +1,37 @@
+.title {
+    position: relative;
+}
+
+.highlight {
+    position: relative;
+    display: inline-block;
+    margin: 0 0.1rem;
+}
+
+.highlight::before {
+    content: "";
+    background-color: #00c0ff;
+    height: 1rem;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+    width: 0;
+}
+
+.animate::before {
+    animation: bouncyEffect 1.5s forwards ease-in;
+}
+
+@keyframes bouncyEffect {
+    0% {
+        width: 0;
+    }
+
+    80% {
+        width: 110%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}

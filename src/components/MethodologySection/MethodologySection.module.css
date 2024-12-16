@@ -1,0 +1,39 @@
+.methodologyBox {
+    padding: 60px 20px;
+    border-bottom: 1px solid var(--highlited-color);
+    height: 245px;
+    transition: all 0.5s;
+    position: relative;
+    overflow: visible;
+    margin-bottom: 5px;
+}
+
+.methodologyBox::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    background: var(--highlited-color);
+    margin: auto;
+    width: 5px;
+    height: 5px;
+    border-radius: 50px;
+}
+
+.methodologyBox:hover {
+    padding: 20px;
+    height: auto;
+    border: 1px solid var(--highlited-color);
+}
+
+.methodologyBox ul {
+    height: 0;
+    transition: height 1s linear;
+    overflow: hidden;
+    font-size: 1rem;
+}
+
+.methodologyBox:hover ul {
+    height: auto;
+}

@@ -1,0 +1,19 @@
+.clientList {
+    display: flex;
+    list-style: none;
+    overflow-x: scroll;
+    flex: 0 0 600px;
+    margin: 0 auto;
+}
+
+.clientList > div {
+    flex: 0 0 40%;
+    margin: 0 15px;
+    border-radius: 1rem;
+    backdrop-filter: blur(23.170732498168945px);
+    box-shadow: 0px 0px 9.27px 0px rgba(0, 0, 0, 0.1) inset;
+}
+
+.clientList > div:last-of-type {
+    margin: 0;
+}

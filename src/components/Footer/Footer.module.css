@@ -1,0 +1,31 @@
+.footerContainer {
+  background: url("/images/footerBackground.jpeg") no-repeat;
+  background-size: cover;
+  border: 2px solid white;
+  border-bottom: 0px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.companyinfo a {
+  margin-bottom: 0.9rem;
+  text-decoration: none !important;
+  color: var(--white-color);
+  font-family: Montserrat;
+  text-align: left;
+}
+
+.companyinfo a svg,
+.companyinfo a img {
+  margin-right: 7px;
+}
+
+.sociallinks a {
+  margin-right: 1rem;
+  background: var(--white-color);
+  border-radius: 100%;
+}
+
+.lastIndexColumn {
+  column-count: 2;
+}
